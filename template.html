@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!--
+    ╔══════════════════════════════════════════════════════════════════════╗
+    ║              EAGLENEST ACADEMY – PAGE TEMPLATE                      ║
+    ║                                                                      ║
+    ║  Copy this file as the starting point for every new page.           ║
+    ║  Replace [PAGE TITLE] and the <main> content.                       ║
+    ║  Do NOT change the order of the script/link tags below.             ║
+    ╚══════════════════════════════════════════════════════════════════════╝
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    ── SEO meta tags ──────────────────────────────────────────────────────
+    Update title, description, and og:* tags per page.
+  -->
+  <title>[PAGE TITLE] | Eaglenest Academy</title>
+  <meta name="description"
+        content="Eaglenest Academy – Nurturing Eagles, Shaping Futures. [Add a 150-160 char page-specific description here.]">
+  <meta name="author" content="Eaglenest Academy">
+  <meta name="theme-color" content="#0284C7">
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Eaglenest Academy">
+  <meta property="og:title"       content="[PAGE TITLE] | Eaglenest Academy">
+  <meta property="og:description" content="[Add a 150-160 char page-specific description here.]">
+  <meta property="og:image"       content="assets/images/og-cover.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+  <link rel="apple-touch-icon"      href="assets/images/logo/apple-touch-icon.png">
+
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <!-- STEP 1 – Tailwind brand config (MUST come before the CDN script)    -->
+  <!-- Defines custom colors (sky, leaf, ink), fonts, shadows, radii.      -->
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <script src="assets/js/tailwind-config.js"></script>
+
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <!-- STEP 2 – Tailwind CSS CDN                                           -->
+  <!-- Reads window.tailwind.config set above.                             -->
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <!-- STEP 3 – Google Fonts                                               -->
+  <!-- Questrial (heading fallback) + Montserrat (body)                    -->
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <!-- STEP 4 – Custom CSS                                                 -->
+  <!-- Body styles, heading fonts, .reveal animations, gradients, FAB,    -->
+  <!-- accordion, back-to-top, focus styles, print rules.                  -->
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+
+<body class="font-body text-ink bg-white">
+
+  <!--
+    ══════════════════════════════════════════════════════════════════════
+    SITE HEADER
+    Populated by components.js → buildNavbar()
+    Contains: sticky navbar, desktop links, "Apply Now" CTA,
+              hamburger button, mobile drawer, backdrop overlay.
+    ══════════════════════════════════════════════════════════════════════
+  -->
+  <header id="site-header" role="banner"></header>
+
+  <!--
+    ══════════════════════════════════════════════════════════════════════
+    MAIN CONTENT
+    ──────────────────────────────────────────────────────────────────────
+    Replace everything inside <main> with page-specific content.
+
+    Available utility classes from tailwind-config.js + custom.css:
+      Colors:      bg-sky-50, bg-leaf-600, text-ink, bg-brand-gradient …
+      Shadows:     shadow-soft, shadow-soft-md, shadow-soft-lg
+      Rounded:     rounded-4xl, rounded-5xl
+      Animations:  reveal, reveal-left, reveal-right, reveal-fade
+                   reveal-delay-1 … reveal-delay-5
+      Typography:  font-heading, font-body, heading-underline
+                   stat-number [data-count="…"] [data-suffix="…"]
+      Accordion:   .accordion-item > .accordion-trigger + .accordion-body
+    ══════════════════════════════════════════════════════════════════════
+  -->
+  <main id="main-content" tabindex="-1">
+
+    <!--
+      ── Example: Hero section ─────────────────────────────────────────
+      Delete or replace with real content.
+    -->
+    <section class="relative bg-brand-gradient text-white py-20 px-4 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="font-heading text-white mb-4 reveal">
+          Welcome to Eaglenest Academy
+        </h1>
+        <p class="text-sky-100 text-lg mb-8 reveal reveal-delay-1">
+          Nurturing Eagles, Shaping Futures – a place where excellence meets
+          compassion.
+        </p>
+        <a href="admissions.html"
+           class="inline-flex items-center px-8 py-3 rounded-full bg-white text-leaf-600
+                  font-semibold hover:bg-sky-50 transition-colors duration-150 shadow-soft reveal reveal-delay-2">
+          Apply Now
+        </a>
+      </div>
+    </section>
+
+    <!--
+      ── Example: Stats row ────────────────────────────────────────────
+    -->
+    <section class="py-16 bg-sky-50">
+      <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+        <div class="reveal">
+          <div class="stat-number" data-count="1200" data-suffix="+">0</div>
+          <p class="text-ink/70 text-sm mt-1">Students Enrolled</p>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <div class="stat-number" data-count="85" data-suffix="+">0</div>
+          <p class="text-ink/70 text-sm mt-1">Qualified Teachers</p>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="stat-number" data-count="30" data-suffix=" yrs">0</div>
+          <p class="text-ink/70 text-sm mt-1">Years of Excellence</p>
+        </div>
+
+        <div class="reveal reveal-delay-3">
+          <div class="stat-number" data-count="98" data-suffix="%">0</div>
+          <p class="text-ink/70 text-sm mt-1">Pass Rate</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!--
+      ── Example: Accordion (FAQ) ──────────────────────────────────────
+    -->
+    <section class="py-16 px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading heading-underline mb-10 reveal">
+          Frequently Asked Questions
+        </h2>
+
+        <div data-accordion-group="faq" class="space-y-3">
+
+          <!-- FAQ item 1 -->
+          <div class="accordion-item border border-sky-100 rounded-2xl overflow-hidden reveal">
+            <button class="accordion-trigger w-full flex items-center justify-between
+                           px-5 py-4 text-left font-semibold text-ink
+                           hover:bg-sky-50 transition-colors duration-150"
+                    aria-expanded="false">
+              <span>When does the new academic year begin?</span>
+              <svg class="accordion-icon w-5 h-5 text-sky-500 shrink-0"
+                   fill="none" stroke="currentColor" stroke-width="2"
+                   viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="accordion-body px-5 text-ink/80 text-sm leading-relaxed">
+              <div class="pb-4">
+                The academic year begins in January. Applications for the following year
+                open in September and close in November.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ item 2 -->
+          <div class="accordion-item border border-sky-100 rounded-2xl overflow-hidden reveal reveal-delay-1">
+            <button class="accordion-trigger w-full flex items-center justify-between
+                           px-5 py-4 text-left font-semibold text-ink
+                           hover:bg-sky-50 transition-colors duration-150"
+                    aria-expanded="false">
+              <span>What documents are required for admission?</span>
+              <svg class="accordion-icon w-5 h-5 text-sky-500 shrink-0"
+                   fill="none" stroke="currentColor" stroke-width="2"
+                   viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="accordion-body px-5 text-ink/80 text-sm leading-relaxed">
+              <div class="pb-4">
+                You will need a birth certificate, previous school report cards,
+                passport-size photographs, and a completed application form.
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /data-accordion-group -->
+      </div>
+    </section>
+    <!-- END example content – replace above with real page sections -->
+
+  </main>
+
+  <!--
+    ══════════════════════════════════════════════════════════════════════
+    SITE FOOTER
+    Populated by components.js → buildFooter()
+    Contains: 4-column grid (about, quick links, contact, hours+socials),
+              copyright bar.
+    ══════════════════════════════════════════════════════════════════════
+  -->
+  <footer id="site-footer" role="contentinfo"></footer>
+
+  <!--
+    ══════════════════════════════════════════════════════════════════════
+    SCRIPTS – order matters
+    ──────────────────────────────────────────────────────────────────────
+    1. components.js  – injects navbar, footer, WhatsApp FAB into the DOM.
+    2. main.js        – wires up all interactive behaviours.
+    ══════════════════════════════════════════════════════════════════════
+  -->
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!--
+    Page-specific scripts go here (below main.js), e.g.:
+    <script src="assets/js/gallery.js"></script>
+  -->
+
+</body>
+</html>
